@@ -1,0 +1,5 @@
+{
+  "name": "davinci-workflow-skills",
+  "owner": {"name": "amartinez1558"},
+  "plugins": [{"name": "davinci-workflow", "source": "./", "description": "Media, Edit, B-roll, Fusion, Color, Fairlight, Export and Dropbox skills."}]
+}

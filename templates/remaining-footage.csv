@@ -1,0 +1,3 @@
+"id","timestamp","priority","what","context","status","reviewed_version"
+"R001","00:00:25.000","high","Actual small-group study with Jane Doe and John Doe","Illustrative later-event footage does not fulfill this exact study scene.","missing","V1"
+"R002","00:00:40.000","medium","Landscape ending selfie reflections","Collect the approved prompt, clear speech and usable handles; placement is provisional.","requested","V1"
