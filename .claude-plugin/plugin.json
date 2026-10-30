@@ -1,6 +1,6 @@
 {
   "name": "davinci-workflow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Story-first DaVinci Resolve workflows, from Dropbox ingest to verified delivery.",
   "author": {"name": "amartinez1558"},
   "license": "MIT"

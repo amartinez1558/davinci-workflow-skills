@@ -1,6 +1,6 @@
-# Reusable project intake
+# Advanced project intake
 
-Copy and fill what you know. Leave unknown fields blank.
+For a simpler start, use the [beginner prompt](beginner-intake.md). This version is for projects needing detailed control. Copy and fill what you know; leave unknown fields blank.
 
 ~~~text
 Use the DaVinci workflow skills to complete this video project.

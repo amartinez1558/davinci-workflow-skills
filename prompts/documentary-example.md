@@ -20,4 +20,4 @@ Replace bracketed paths. Jane Doe and John Doe are fictional examples. Settings 
 >
 > **Delivery:** Make a 1080p24 sharing MP4 with visibly burned captions and retain editable cues. Preserve earlier exports; read back settings and render only intended jobs. Check metadata, full decode, transitions/titles/captions/color, encoded peaks and sync. Use native UI for unsupported controls and screenshots for visual checks. If playback stalls, use rendered review samples and disclose limits. Verify Dropbox upload before claiming cloud availability. Report missing assets and outstanding full listening/calibrated review.
 
-For new projects use the [intake template](project-intake-template.md).
+For new projects use the [beginner prompt](beginner-intake.md), or the [advanced intake](project-intake-template.md) for detailed control.

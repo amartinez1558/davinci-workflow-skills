@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 — 2026-10-30
+
+- Added a beginner intake prompt with everyday questions, suggested choices and defaults handled by the assistant.
+- Made beginner intake the README starting point; retained the detailed intake as an advanced option.
+
 ## 0.1.0 — 2026-10-30
 
 - Eight skills: Media, Edit, B-roll, Fusion, Color, Fairlight, Export and Dropbox.

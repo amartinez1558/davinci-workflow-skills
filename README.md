@@ -1,6 +1,6 @@
 # DaVinci Workflow Skills
 
-Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.1.0 · MIT**
+Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.1.1 · MIT**
 
 **Index:** [Skills](#skills) · [Prerequisites](#prerequisites) · [Install](#install) · [Prompts and sheets](#prompts-and-sheets) · [Testing](#testing) · [Contribute](#contribute)
 
@@ -34,7 +34,7 @@ Use a step directly or follow the [workflow contract](docs/workflow-contract.md)
 With a current Codex CLI:
 
 ~~~sh
-codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.1.0
+codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.1.1
 codex plugin add davinci-workflow@davinci-workflow-skills
 ~~~
 
@@ -52,7 +52,7 @@ Start a new session. For an exact version, clone the tag below, then use /plugin
 ### Clone or install individual skills
 
 ~~~sh
-git clone --branch v0.1.0 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
+git clone --branch v0.1.1 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
 ~~~
 
 Copy desired skill folders into your client's skill directory: current Codex uses ~/.agents/skills/ and Claude Code uses ~/.claude/skills/. Review before overwriting existing same-name skills. Keep the clone for prompts and templates. No install script changes your assistant settings.
@@ -61,9 +61,10 @@ Invoke in Codex with $davinci-broll or in Claude Code with /davinci-workflow:dav
 
 ## Prompts and sheets
 
+- **Start here: [Beginner video prompt](prompts/beginner-intake.md)** — everyday questions and sensible defaults; no technical knowledge needed
 - [Original clip-sharing request, organized](prompts/clip-sharing-example.md)
 - [Documentary-edit example](prompts/documentary-example.md), using Jane Doe and John Doe
-- [Reusable intake prompt](prompts/project-intake-template.md), with questions for missing details
+- [Advanced intake prompt](prompts/project-intake-template.md), for detailed project control
 - [Script CSV](templates/video-script.csv) and [remaining-footage CSV](templates/remaining-footage.csv) for Google Sheets
 - [Template field guide](docs/templates.md): time domains, multiple links and statuses
 

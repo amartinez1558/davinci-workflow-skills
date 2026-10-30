@@ -1,4 +1,4 @@
-# Validation — 0.1.0
+# Validation — 0.1.1
 
 **Index:** [Baseline](#baseline) · [Checks](#checks) · [Behavioral scenarios](#behavioral-scenarios) · [Limits](#limits)
 
@@ -7,6 +7,8 @@
 The author reports that the originating workflow was tested and used with **GPT 6.1 Sol High** and DaVinci Resolve Studio 21.1.2. The practical source included separate graded clip exports and multiple documentary-edit review iterations. This release generalizes those lessons; no private history, media or source project is distributed.
 
 ## Checks
+
+Version 0.1.1 adds the beginner prompt and updates documentation/package versions. The eight workflow skill instructions are unchanged from 0.1.0. Prompt review checks that technical choices stay with the assistant and missing editorial decisions receive plain-language questions.
 
 Release checks cover eight skills' frontmatter/naming/versioning, coherent manifests, marketplace source paths, internal documentation links and CSV structure. Run:
 
