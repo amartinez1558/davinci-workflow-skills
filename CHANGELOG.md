@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2 — 2026-10-30
+
+- Beginner prompt now checks skills installation/enabling, Resolve readiness and a verified AI connection before editing.
+- Includes the repository link for fresh starts, reuses existing setup and guides restart/resume when needed.
+
 ## 0.1.1 — 2026-10-30
 
 - Added a beginner intake prompt with everyday questions, suggested choices and defaults handled by the assistant.

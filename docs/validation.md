@@ -1,4 +1,4 @@
-# Validation — 0.1.1
+# Validation — 0.1.2
 
 **Index:** [Baseline](#baseline) · [Checks](#checks) · [Behavioral scenarios](#behavioral-scenarios) · [Limits](#limits)
 
@@ -8,7 +8,7 @@ The author reports that the originating workflow was tested and used with **GPT 
 
 ## Checks
 
-Version 0.1.1 adds the beginner prompt and updates documentation/package versions. The eight workflow skill instructions are unchanged from 0.1.0. Prompt review checks that technical choices stay with the assistant and missing editorial decisions receive plain-language questions.
+Version 0.1.1 added the beginner prompt. Version 0.1.2 adds setup/readiness instructions: installed/enabled skills, restart/resume, intended Resolve project and a read-only AI connection check before editing. Package versions and links are checked by the repository validator. The eight workflow skills remain unchanged from 0.1.0; this prompt update was not a live installation or Resolve connection test.
 
 Release checks cover eight skills' frontmatter/naming/versioning, coherent manifests, marketplace source paths, internal documentation links and CSV structure. Run:
 
