@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "davinci-workflow",
+  "version": "0.1.0",
+  "description": "Story-first DaVinci Resolve workflows, from Dropbox ingest to verified delivery.",
+  "license": "MIT",
+  "keywords": ["davinci-resolve", "video-editing", "dropbox", "agent-skills"],
+  "extensions": {"com.openai": {"interface": {"displayName": "DaVinci Workflow", "shortDescription": "Media, Edit, Fusion, Color, Fairlight and Export skills", "developerName": "amartinez1558", "category": "Productivity"}}}
+}

@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+.env
+.env.*
+*.drp
+*.drt
+*.db
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.wav
+*.WAV
+*.cube
+dist/
