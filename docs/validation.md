@@ -1,4 +1,4 @@
-# Validation — 0.1.2
+# Validation — 0.1.3
 
 **Index:** [Baseline](#baseline) · [Checks](#checks) · [Behavioral scenarios](#behavioral-scenarios) · [Limits](#limits)
 
@@ -9,6 +9,8 @@ The author reports that the originating workflow was tested and used with **GPT 
 ## Checks
 
 Version 0.1.1 added the beginner prompt. Version 0.1.2 adds setup/readiness instructions: installed/enabled skills, restart/resume, intended Resolve project and a read-only AI connection check before editing. Package versions and links are checked by the repository validator. The eight workflow skills remain unchanged from 0.1.0; this prompt update was not a live installation or Resolve connection test.
+
+Version 0.1.3 fixes the standalone Claude command and adds six package tests alongside the five CSV tests. Invalid owner names, marketplace names, Codex policies and categories are rejected; all supported policy combinations are accepted. The regression cases failed before the validator fix and pass afterward.
 
 Release checks cover eight skills' frontmatter/naming/versioning, coherent manifests, marketplace source paths, internal documentation links and CSV structure. Run:
 

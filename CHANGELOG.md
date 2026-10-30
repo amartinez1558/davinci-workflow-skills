@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 — 2026-10-30
+
+- Corrected Claude invocation instructions for standalone skills versus plugin installs.
+- Reject missing/blank marketplace names, invalid Claude owner names, missing/invalid Codex policies and blank categories.
+- Added package regression tests, including acceptance of every supported Codex installation/authentication policy combination.
+
 ## 0.1.2 — 2026-10-30
 
 - Beginner prompt now checks skills installation/enabling, Resolve readiness and a verified AI connection before editing.

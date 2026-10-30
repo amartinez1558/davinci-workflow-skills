@@ -61,9 +61,26 @@ def validate(root):
 
     for relative in ['.agents/plugins/marketplace.json', '.claude-plugin/marketplace.json']:
         marketplace = json.loads((root / relative).read_text(encoding='utf-8'))
+        require(isinstance(marketplace.get('name'), str) and marketplace['name'].strip(),
+                f'{relative}: marketplace name must be nonempty text')
+        if relative.startswith('.claude-plugin/'):
+            owner = marketplace.get('owner')
+            require(isinstance(owner, dict) and isinstance(owner.get('name'), str)
+                    and owner['name'].strip(), f'{relative}: owner.name must be nonempty text')
         entries = marketplace['plugins']
         require(len(entries) == 1 and entries[0]['name'] == name,
                 f'{relative}: plugin identity mismatch')
+        if relative.startswith('.agents/'):
+            policy = entries[0].get('policy')
+            require(isinstance(policy, dict), f'{relative}: policy object required')
+            require(policy.get('installation') in
+                    ('AVAILABLE', 'INSTALLED_BY_DEFAULT', 'NOT_AVAILABLE'),
+                    f'{relative}: invalid policy.installation')
+            require(policy.get('authentication') in ('ON_INSTALL', 'ON_USE'),
+                    f'{relative}: invalid policy.authentication')
+            category = entries[0].get('category')
+            require(isinstance(category, str) and category.strip(),
+                    f'{relative}: category must be nonempty text')
         source = entries[0]['source']
         if isinstance(source, dict):
             require(source.get('source') == 'local', f'{relative}: expected local source')
