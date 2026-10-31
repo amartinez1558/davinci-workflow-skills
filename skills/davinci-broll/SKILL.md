@@ -2,7 +2,7 @@
 name: davinci-broll
 description: Use when selecting, inspecting, sequencing, or replacing B-roll in DaVinci Resolve, mapping footage to narration, avoiding misleading event coverage, or reporting missing footage.
 metadata:
-  version: '0.1.0'
+  version: '0.1.1'
 ---
 
 # DaVinci B-roll
@@ -43,7 +43,8 @@ If the match fails, retain the relevant interview face, find a better shot, or r
 - Cover interview jump cuts with relevant picture. A longer continuous action can bridge the cut better than several disconnected inserts. Keep emotional testimony on the face when exact coverage is unavailable.
 - When quicker cutting is requested, trim idle handles and redundant establishing views and compare the opening with the rest at playback speed. Keep useful long holds; a fixed maximum shot duration is not a substitute for judgment.
 - Introduce real variety through scale, angle, action, context, and composition. Do not achieve no-repeat bookkeeping by selecting nearly identical moments from different files or tiny adjacent ranges.
-- Slow B-roll or stabilize movement when appropriate to the brief. Check for retime artifacts, unwanted internal cuts, and insufficient source handles. Do not accidentally retime interview speech or move approved dialogue.
+- Prefer footage captured at a sufficiently high source frame rate for the intended slowdown and timeline rate. Generally keep 24/30 fps footage (including 23.976/29.97) at normal speed. If low-frame-rate footage must be slowed, set the clip's Retime Process to Optical Flow for smoother playback, verify the setting, and inspect rendered motion for warping or other interpolation artifacts. Check source handles and internal cuts; do not accidentally retime interview speech or move approved dialogue.
+- For Ken Burns effects on stills, place the original image on the timeline and use Resolve's native Dynamic Zoom instead of pre-rendering the movement into a video clip. Keep the framing and motion editable; check the start/end crop, subject placement, and playback.
 
 ## Keep time domains explicit
 

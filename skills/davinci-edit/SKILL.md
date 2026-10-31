@@ -2,7 +2,7 @@
 name: davinci-edit
 description: Use when assembling or revising a DaVinci Resolve story edit from a brief, script, interviews, review notes, and B-roll, including captions, lower thirds, title cards, and version preservation.
 metadata:
-  version: '0.1.0'
+  version: '0.1.1'
 ---
 
 # DaVinci edit
@@ -23,7 +23,8 @@ Build the requested story while preserving the user's current work. Treat the cu
 - Build purposeful action sequences: an exterior approach, settling at a table, indoor work, then reading can establish progression when the narration supports it. Avoid returning to an earlier action stage without a clear narrative reason. Let complete actions or emotional moments hold.
 - When feedback asks for quicker cutting, shorten redundant establishing shots and idle portions, especially near the opening. Judge the whole sequence at playback speed; do not replace purposeful holds with an arbitrary universal shot length.
 - Avoid repeating the same source or perceptually similar setup when the brief asks for no repeats. Reserve a shot for its strongest narrative match. Prefer genuinely different action, scale, angle, or context over filename variety.
-- Slow or stabilize B-roll where requested and useful. Verify motion, source handles, internal cuts, and retimed duration; do not slow synchronized speech or silently change interview timing.
+- Prefer high-frame-rate sources for slow motion; generally do not slow 24/30 fps footage (including 23.976/29.97). If low-frame-rate footage must be slowed, set the clip's Retime Process to Optical Flow, verify the setting, and check rendered playback for smooth motion and interpolation artifacts. Verify source handles, internal cuts, and retimed duration; do not slow synchronized speech or silently change interview timing.
+- For Ken Burns effects, use the original still image with native Dynamic Zoom rather than pre-rendering an animated video. Preserve editable start/end framing and inspect the crop and motion in playback.
 
 ## Handle gaps honestly
 

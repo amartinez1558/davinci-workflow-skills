@@ -2,7 +2,7 @@
 name: davinci-fairlight
 description: Use when synchronizing external dialogue recordings, editing interviews, cleaning and mixing speech with music, or validating final encoded audio in DaVinci Resolve and Fairlight.
 metadata:
-  version: '0.1.0'
+  version: '0.1.1'
 ---
 
 # Dialogue and Fairlight
@@ -20,13 +20,14 @@ Make speech clear, preserve natural delivery, and verify audio in the encoded de
 ## Edit and clean speech
 
 - Remove abandoned takes, restarts, mistakes, and distracting long pauses while retaining meaning, useful breaths, and emotional beats. Transcription helps locate material; verify edits against the recording rather than treating transcript text as the edit.
-- Use short appropriate fades and room tone to prevent clicks and abrupt noise changes. Check the sound of every meaningful edit, including cuts hidden under B-roll.
+- At dialogue joins, use a clean hard cut when it sounds natural, or a short overlapping crossfade with adequate source handles when needed to blend room tone or prevent a click. Do not automatically fade each outgoing clip to silence and fade the next clip up: paired corner fades create audible holes and clipped syllables. Preserve breathing room and check joins with speech and music in the rendered mix, including cuts hidden under B-roll.
 - Choose a low-cut frequency from actual rumble and the voice, not a universal preset. Apply voice isolation, denoising, leveling, and compression judiciously; compare bypassed and processed passages for thin tone, pumping, artifacts, clipped consonants, and lost breaths.
 - Tool availability and Studio features vary. Inspect installed API/UI support, read back applied settings, and verify the audible result. Do not claim AI isolation or another effect was applied merely because it was requested.
 
 ## Fit music under the story
 
 - Shape cues around speech and story transitions, with intentional fades and edits. Use automation or ducking as needed, then listen in context; automatic ducking alone does not establish a balanced mix.
+- Keep music continuous beneath dialogue trims. Do not ripple-cut the score at every speech deletion or add paired fades at those boundaries. Refit the music to the revised duration from continuous source phrases, use overlapping crossfades at intentional music-cue changes, and update ducking against the revised dialogue. Reserve fades to silence for intentional musical entrances, exits or story pauses.
 - Speech intelligibility takes priority during narration and interviews. If music was reported too loud, reassess the speech/music relationship across quiet and loud voices instead of normalizing the whole mix and assuming the issue is resolved.
 - Check transitions, silence boundaries, channel routing, and downmix behavior. Preserve the requested dialogue tracks and source sync while changing music levels.
 

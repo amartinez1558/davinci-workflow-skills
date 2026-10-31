@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.4 — 2026-10-31
+
+- Keep dialogue joins clean with hard cuts or overlapping crossfades; avoid automatic paired fades to silence.
+- Preserve continuous music across speech trims, with cue crossfades and intentional musical entrances/exits.
+- Prefer high-frame-rate footage for slow motion; when 24/30 fps footage must be slowed, use Optical Flow and inspect interpolation artifacts.
+- Use original stills with native Dynamic Zoom for editable Ken Burns effects instead of pre-rendered animation.
+
 ## 0.1.3 — 2026-10-30
 
 - Corrected Claude invocation instructions for standalone skills versus plugin installs.

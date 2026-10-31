@@ -1,4 +1,4 @@
-# Validation — 0.1.3
+# Validation — 0.1.4
 
 **Index:** [Baseline](#baseline) · [Checks](#checks) · [Behavioral scenarios](#behavioral-scenarios) · [Limits](#limits)
 
@@ -8,9 +8,11 @@ The author reports that the originating workflow was tested and used with **GPT 
 
 ## Checks
 
-Version 0.1.1 added the beginner prompt. Version 0.1.2 adds setup/readiness instructions: installed/enabled skills, restart/resume, intended Resolve project and a read-only AI connection check before editing. Package versions and links are checked by the repository validator. The eight workflow skills remain unchanged from 0.1.0; this prompt update was not a live installation or Resolve connection test.
+Version 0.1.1 added the beginner prompt. Version 0.1.2 adds setup/readiness instructions: installed/enabled skills, restart/resume, intended Resolve project and a read-only AI connection check before editing. Package versions and links are checked by the repository validator. Versions 0.1.1 and 0.1.2 left the eight workflow skills unchanged from 0.1.0; those prompt updates were not live installation or Resolve connection tests.
 
 Version 0.1.3 fixes the standalone Claude command and adds six package tests alongside the five CSV tests. Invalid owner names, marketplace names, Codex policies and categories are rejected; all supported policy combinations are accepted. The regression cases failed before the validator fix and pass afterward.
+
+Version 0.1.4 updates Edit, B-roll and Fairlight to skill version 0.1.1: avoid paired dialogue fades, maintain continuous music under speech trims, require Optical Flow when low-frame-rate footage must be slowed, and keep Ken Burns motion native/editable with Dynamic Zoom. Package validation and regression tests cover the release; independent behavioral checks are recorded below.
 
 Release checks cover eight skills' frontmatter/naming/versioning, coherent manifests, marketplace source paths, internal documentation links and CSV structure. Run:
 
@@ -37,6 +39,16 @@ Three subagents independently applied skills written by other agents to hypothet
 | 17 GB free, 80 GB roll, paused sync, extra outputs and invalid proxy | Use bounded hydration; verify canonical mappings/cloud copies; no wholesale download or original deletion |
 
 The review found and corrected two ambiguities: Fusion rendered-output checks now respect saved-edit-only requests; color guidance accounts for the transform position in managed projects.
+
+For 0.1.4, one independent subagent read the changed skills and applied them to three additional hypothetical scenarios without live side effects:
+
+| Scenario | Observed decision |
+| --- | --- |
+| Speech trims, continuous score and prior manual crossfades | Preserve manual crossfades, gains and sync; use natural hard cuts or overlapping dialogue crossfades with handles. Keep music continuous across speech deletions, refit musical cues and refresh ducking. |
+| Slowed 24/29.97 fps B-roll, with a relevant 60 fps alternative on a 24 fps timeline | Prefer the 60 fps source; 40% speed supplies 24 distinct captured frames per timeline second. Keep low-rate footage at normal speed where possible; if slowdown is required, select Optical Flow, verify it and inspect rendered motion for artifacts. |
+| Still-photo Ken Burns effect with native editability required | Use the original image with Dynamic Zoom; preserve editable duration and start/end framing, and inspect the crop, subject and motion. Do not pre-render an animated clip. |
+
+No blocking conflict was found. This is instruction-based validation, not a new live Optical Flow or Dynamic Zoom test.
 
 ## Limits
 
