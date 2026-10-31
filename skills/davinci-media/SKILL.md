@@ -2,7 +2,7 @@
 name: davinci-media
 description: Use when ingesting, organizing, identifying, proxying, or relinking media for DaVinci Resolve, including storage-aware source preparation and recoverable project milestones.
 metadata:
-  version: '0.1.0'
+  version: '0.1.1'
 ---
 
 # DaVinci media
@@ -19,6 +19,8 @@ Prepare traceable media that remains linked to its camera originals. Discover th
 - Preserve linked-asset provenance, licensing/credit requirements, and download status. A spreadsheet cell may contain multiple hyperlinks. Read every relevant link and do not edit the source sheet unless requested.
 
 ## Build and link proxies
+
+When bin organization is requested, inventory Media Pool identities and source/proxy links, including references from archived timelines. Group existing items by role, ROLL/provenance and original versus working media, with current timelines/graphics easy to find and prior generated versions in an archive. Prefer native bin moves over reimporting or filesystem renames. Remove only verified empty former bins; an item unused by the current cut may still be required by another version. Verify the same media identities and links survive.
 
 1. Preserve camera originals. Save the project and export a recoverable `.drp` milestone before bulk import, relink, or proxy replacement; export a `.drt` for a timeline milestone when available. Store these in a project `projects/` folder outside Resolve's live project database. Exports are project/timeline snapshots, not copies of source media.
 2. Budget for the next source download, proxy, temporary encode, and render/cache headroom. Hydrate a small batch, often one large source at a time. Do not import a whole cloud-backed ROLL merely to inspect it: Resolve may hydrate every original and appear stuck. Check progress before issuing another import or restarting.

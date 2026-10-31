@@ -1,4 +1,4 @@
-# Validation — 0.1.4
+# Validation — 0.1.5
 
 **Index:** [Baseline](#baseline) · [Checks](#checks) · [Behavioral scenarios](#behavioral-scenarios) · [Limits](#limits)
 
@@ -13,6 +13,8 @@ Version 0.1.1 added the beginner prompt. Version 0.1.2 adds setup/readiness inst
 Version 0.1.3 fixes the standalone Claude command and adds six package tests alongside the five CSV tests. Invalid owner names, marketplace names, Codex policies and categories are rejected; all supported policy combinations are accepted. The regression cases failed before the validator fix and pass afterward.
 
 Version 0.1.4 updates Edit, B-roll and Fairlight to skill version 0.1.1: avoid paired dialogue fades, maintain continuous music under speech trims, require Optical Flow when low-frame-rate footage must be slowed, and keep Ken Burns motion native/editable with Dynamic Zoom. Package validation and regression tests cover the release; independent behavioral checks are recorded below.
+
+Version 0.1.5 adds focused guidance for live request markers, bin/track cleanup, intentional black music lead-ins, caption style propagation and newly inserted ungraded shots. The live editing exercise used existing native items and preserved source/proxy identities; this package includes no project media. Independent instruction review and release checks are recorded below.
 
 Release checks cover eight skills' frontmatter/naming/versioning, coherent manifests, marketplace source paths, internal documentation links and CSV structure. Run:
 
@@ -49,6 +51,8 @@ For 0.1.4, one independent subagent read the changed skills and applied them to 
 | Still-photo Ken Burns effect with native editability required | Use the original image with Dynamic Zoom; preserve editable duration and start/end framing, and inspect the crop, subject and motion. Do not pre-render an animated clip. |
 
 No blocking conflict was found. This is instruction-based validation, not a new live Optical Flow or Dynamic Zoom test.
+
+For 0.1.5, an independent agent applied the six changed skills to five read-only scenarios: native cleanup with archived versions and portrait composites; resolved, hidden and unrelated markers; a music-only black lead-in with source silence; no-outline captions across native overrides and an external burn; and new Sony log beside baked proxies and phone HLG. The agent preserved the live edit and media links, kept required layers/effects/timing, retained hidden unresolved requests, refit continuous music without duplicating its opening, propagated caption styling, and avoided double transforms. No blocking ambiguity was found. This was hypothetical instruction review, not a new runtime, installation, listening or calibrated-display test.
 
 ## Limits
 

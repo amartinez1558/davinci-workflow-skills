@@ -2,7 +2,7 @@
 name: davinci-edit
 description: Use when assembling or revising a DaVinci Resolve story edit from a brief, script, interviews, review notes, and B-roll, including captions, lower thirds, title cards, and version preservation.
 metadata:
-  version: '0.1.1'
+  version: '0.1.2'
 ---
 
 # DaVinci edit
@@ -15,6 +15,7 @@ Build the requested story while preserving the user's current work. Treat the cu
 - Inspect the live project and selected timeline before editing, duplicating, or re-exporting. Save a recoverable project checkpoint and snapshot timeline identity, frame rate/start, duration, track layout, picture edits, source ranges, captions, titles, audio, and relevant effects. A saved plan or old project export may predate manual changes.
 - Build the next version from that live state. Preserve manual edits and prior versions; an export-only request uses the latest live edit rather than rebuilding an older schedule. Do not render when the user explicitly requests a saved edit without export.
 - Map review timestamps to the reviewed version. If timings changed, use dialogue/shot anchors to map them into the new version and label both time domains. Keep each comment traceable as fixed, partial, pending asset, or needing clarification.
+- When simplifying video tracks, move existing native items into non-conflicting tracks while preserving source ranges, precise timing, stacking/composite order, transitions, retimes, grades and Fusion effects. Retain the layers needed for sharp portrait foregrounds over blurred backgrounds. Delete tracks only after they are empty, and compare the visible result with the live checkpoint rather than flattening or rebuilding the edit.
 
 ## Shape the story
 
@@ -36,6 +37,7 @@ Use visible draft placeholders when the brief calls for them; a text overlay on 
 
 - Preserve approved spoken wording in a native editable subtitle track and matching sidecar when required. Keep burned captions and editable captions aligned if a captioned review export is requested.
 - Prefer one-line cues grouped into complete phrases or clauses when that is the brief or established preference. Avoid orphan words and awkward cue boundaries. Measure rendered width within safe margins and check reading time against delivery pace; do not copy a previous film's font size or character limit blindly.
+- A translucent dark caption backing can provide contrast without a black text outline; do not add a stroke automatically. Honor a no-outline preference in the native track style, any clip overrides, and external caption-burn settings while retaining the backing and safe placement.
 - Keep lower thirds near the lower safe edge with clear separation from captions. Check the longest name/year in actual frames. Use confirmed identity text; visibly flag missing information rather than guessing. Example people may be Jane Doe and John Doe.
 - Use a simple native style/template where practical. Say when a panel is custom rather than claiming it is a stock template. Reframe interview headroom modestly from suitable originals, checking each face and crop at delivery resolution.
 - When the user asks to avoid duplicated title text and subtitles, suppress only cues whose spoken content is fully represented by the card, for the matching interval. Retain other dialogue captions and preserve a full transcript separately if needed. Do not remove subtitles merely because any title is on screen.

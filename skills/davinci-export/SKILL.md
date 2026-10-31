@@ -2,7 +2,7 @@
 name: davinci-export
 description: Use when exporting smaller graded clips or a finished timeline from DaVinci Resolve, re-exporting manual revisions, selecting render jobs, and checking encoded delivery files and captions.
 metadata:
-  version: '0.1.0'
+  version: '0.1.1'
 ---
 
 # Export and delivery
@@ -28,6 +28,7 @@ Make the requested deliverable from the current approved timeline, verify it, th
 - Render to a staging destination. Preserve an existing delivered version and its companions before replacement. Check storage headroom for intermediates and backup files; never delete source originals to make an export fit.
 - Verify job success and nonempty output, then probe dimensions, frame rate, frame count/duration, audio streams/channels, and expected filenames/count for clip batches. Compare against source/timeline expectations, including intentional retiming.
 - Decode the full deliverable for technical errors when feasible. Inspect decoded frames at intro/outro fades, graphics, changed shots, transitions, and representative caption intervals. Check that burned captions actually appear, remain readable, and clear lower thirds; native subtitle positioning can differ in the rendered output.
+- Validate intentional black intervals against the brief instead of treating every black frame as a coverage failure. For a music-only lead-in, verify its exact duration, music presence, subsequent picture fade and narration/caption onset. Confirm requested caption styling in the final encode as well as the native settings.
 - If an authorized external caption burn or final encode is used, verify the final result against the native render, preserve cue timing, and check intentionally omitted title-duplicate cues. Retain editable captions and a sidecar when requested.
 - Measure the actual final encoded audio against the requested true-peak ceiling; record loudness separately. Check representative listening and lip sync, and state when full human review was not performed.
 - Compare the live timeline with the pre-export snapshot to catch accidental changes during rendering. Save the delivered milestone and a short QC record tied to the exact final file, optionally including a checksum for replacement/sync verification.

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.5 — 2026-10-31
+
+- Reconcile request markers against the current edit and preserve unrelated editorial notes.
+- Organize existing Media Pool items by role and provenance, preserving media identities and source/proxy links.
+- Consolidate video tracks without flattening composites or changing native edits and effects.
+- Verify intentional music-only black lead-ins, shifted narration/captions and actual opening music.
+- Honor caption styles without added text outlines across native and external outputs.
+- Audit newly inserted footage for missing log transforms while preserving approved grades.
+
 ## 0.1.4 — 2026-10-31
 
 - Keep dialogue joins clean with hard cuts or overlapping crossfades; avoid automatic paired fades to silence.

@@ -2,7 +2,7 @@
 name: davinci-fairlight
 description: Use when synchronizing external dialogue recordings, editing interviews, cleaning and mixing speech with music, or validating final encoded audio in DaVinci Resolve and Fairlight.
 metadata:
-  version: '0.1.1'
+  version: '0.1.2'
 ---
 
 # Dialogue and Fairlight
@@ -28,6 +28,7 @@ Make speech clear, preserve natural delivery, and verify audio in the encoded de
 
 - Shape cues around speech and story transitions, with intentional fades and edits. Use automation or ducking as needed, then listen in context; automatic ducking alone does not establish a balanced mix.
 - Keep music continuous beneath dialogue trims. Do not ripple-cut the score at every speech deletion or add paired fades at those boundaries. Refit the music to the revised duration from continuous source phrases, use overlapping crossfades at intentional music-cue changes, and update ducking against the revised dialogue. Reserve fades to silence for intentional musical entrances, exits or story pauses.
+- For a requested music-only black opening, let music play first and delay picture, its entrance fade, narration and associated captions by the approved interval. Preserve their relative timing and shift request/review anchors consistently. Extend or refit a continuous musical phrase rather than duplicating its first seconds. Check the encoded opening for actual music: leading silence inside the source can defeat correct timeline placement.
 - Speech intelligibility takes priority during narration and interviews. If music was reported too loud, reassess the speech/music relationship across quiet and loud voices instead of normalizing the whole mix and assuming the issue is resolved.
 - Check transitions, silence boundaries, channel routing, and downmix behavior. Preserve the requested dialogue tracks and source sync while changing music levels.
 

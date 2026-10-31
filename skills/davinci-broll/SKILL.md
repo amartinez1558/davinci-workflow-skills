@@ -2,7 +2,7 @@
 name: davinci-broll
 description: Use when selecting, inspecting, sequencing, or replacing B-roll in DaVinci Resolve, mapping footage to narration, avoiding misleading event coverage, or reporting missing footage.
 metadata:
-  version: '0.1.1'
+  version: '0.1.2'
 ---
 
 # DaVinci B-roll
@@ -53,6 +53,8 @@ Store source in/out in source frames or source timecode with the source rate; st
 ## Request the footage that would solve the gap
 
 Maintain an audit with stable ID, version-relative timestamp/range, priority, needed person/event/location/action, context, and status. Be concrete: request the actual group discussion with recognizable participants, wide/two-shot/detail/reaction coverage, or a verified photo of the real setup. Identify illustrative substitutes as partial coverage rather than marking the exact request complete.
+
+For request-marker cleanup, reconcile against the live cut using stable IDs and current speech/shot anchors. Remove completed request markers, combine redundant markers for one remaining need, and refresh unresolved ranges after timing changes. Preserve unrelated editorial markers. Removing or hiding a request graphic alone does not prove the asset arrived; retain the unresolved request in the audit unless the user cancels it.
 
 When the brief calls for visible draft placeholders, retain them until the requested asset arrives and use its requested treatment, such as text on a black 50% background. Label what is missing and keep the audit synchronized. Without that instruction, keep appropriate interview picture and report the gap. Missing recordings and pending end-montage assets remain explicit requests; do not invent coverage or identities.
 
