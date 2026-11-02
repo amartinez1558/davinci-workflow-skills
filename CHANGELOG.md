@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 — 2026-11-02
+
+- Replace the README Mermaid block with an accessible static SVG after GitHub’s rich-diagram renderer failed to display it. Keep a single diagram source with no external fonts, scripts or rendering dependency.
+
 ## 0.2.0 — 2026-11-02
 
 - Add `davinci-titles` for reference-led typography, differentiated title/name-card roles, glyph repair and styles that can expand without duplicating the workflow.

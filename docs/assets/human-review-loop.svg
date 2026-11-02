@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="746" viewBox="0 0 920 746" role="img" aria-labelledby="title description">
+  <title id="title">Human and agent video review loop</title>
+  <desc id="description">A human supplies the brief. The agent protects the project and creates a rough cut. The human reviews, marks trims and requests B-roll; the agent revises and returns a new cut for review. Once the cut is approved, the agent finishes and checks it. Human final review can return changes to the review loop or approve delivery.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#334155"/></marker>
+  </defs>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; fill: #172b41; text-anchor: middle; }
+    .card { stroke: #64748b; stroke-width: 1.5; rx: 12; }
+    .human { fill: #e8f1ff; }
+    .agent { fill: #e6f5ef; }
+    .role { font-size: 18px; font-weight: bold; }
+    .action { font-size: 17px; }
+    .label { font-size: 15px; }
+    .edge { fill: none; stroke: #334155; stroke-width: 2; marker-end: url(#arrow); }
+  </style>
+  <rect width="920" height="746" rx="16" fill="#ffffff"/>
+  <g transform="translate(220 18)"><rect class="card human" width="480" height="70"/><text x="240" y="27" class="role">Human: purpose and material</text><text x="240" y="51" class="action">Brief, script, footage and style examples</text></g>
+  <g transform="translate(220 126)"><rect class="card agent" width="480" height="70"/><text x="240" y="27" class="role">Agent: protect and assemble</text><text x="240" y="51" class="action">Inspect live project, back up, make rough cut</text></g>
+  <g transform="translate(220 234)"><rect class="card human" width="480" height="70"/><text x="240" y="27" class="role">Human: review the current version</text><text x="240" y="51" class="action">Mark trims and identify exact B-roll needs</text></g>
+  <g transform="translate(220 342)"><rect class="card agent" width="480" height="70"/><text x="240" y="27" class="role">Agent: revise and track gaps</text><text x="240" y="51" class="action">Apply notes, update captions and footage requests</text></g>
+  <g transform="translate(220 450)"><rect class="card agent" width="480" height="70"/><text x="240" y="27" class="role">Agent: finish and check</text><text x="240" y="51" class="action">Titles, color, sound and output checks</text></g>
+  <g transform="translate(220 558)"><rect class="card human" width="480" height="70"/><text x="240" y="27" class="role">Human: final review</text><text x="240" y="51" class="action">Watch and listen; accept or request changes</text></g>
+  <g transform="translate(220 666)"><rect class="card agent" width="480" height="62"/><text x="240" y="26" class="role">Agent: deliver</text><text x="240" y="49" class="action">Video, captions, saved project and open items</text></g>
+  <path class="edge" d="M460 88V126"/>
+  <path class="edge" d="M460 196V234"/>
+  <path class="edge" d="M460 304V342"/>
+  <path class="edge" d="M460 412V450"/>
+  <text class="label" x="566" y="436">When cut approved</text>
+  <path class="edge" d="M460 520V558"/>
+  <path class="edge" d="M460 628V666"/>
+  <text class="label" x="546" y="652">Approved delivery</text>
+  <path class="edge" d="M220 377H104V269H220"/>
+  <text class="label" x="160" y="322">New cut</text>
+  <text class="label" x="160" y="342">for review</text>
+  <path class="edge" d="M700 593H808V269H700"/>
+  <text class="label" x="854" y="420">Changes</text>
+</svg>

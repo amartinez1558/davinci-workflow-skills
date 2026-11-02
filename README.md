@@ -1,6 +1,6 @@
 # DaVinci Workflow Skills
 
-Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.2.0 · MIT**
+Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.2.1 · MIT**
 
 **Index:** [Review loop](#human-and-agent-review-loop) · [Skills](#skills) · [Prerequisites](#prerequisites) · [Install](#install) · [Prompts and sheets](#prompts-and-sheets) · [Testing](#testing) · [Contribute](#contribute)
 
@@ -8,18 +8,7 @@ Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per wor
 
 The human decides what the video should say and whether the edit works. The agent protects the project, makes revisions and checks the files.
 
-```mermaid
-flowchart TD
-    A["Human: goal, material and examples"] --> B["Agent: inspect, back up and build rough cut"]
-    B --> C["Human: review the viewing copy"]
-    C --> D["Human: mark trims and identify B-roll needs"]
-    D --> E["Agent: revise and track missing footage"]
-    E --> C
-    C -->|Ready to finish| F["Agent: titles, color, sound and output checks"]
-    F --> G["Human: final review"]
-    G -->|Changes| D
-    G -->|Approved delivery| H["Agent: deliver video, captions and open items"]
-```
+![Human supplies the brief; the agent assembles a rough cut; human trim and B-roll reviews iterate with agent revisions, followed by finishing, final review and authorized delivery.](docs/assets/human-review-loop.svg)
 
 Read the [human review guide](docs/human-review-workflow.md) for what to supply, a simple trim table, precise B-roll requests, manual-edit preservation and final review. Reviews can be bundled; the agent carries forward choices and export authorization already given.
 
@@ -54,7 +43,7 @@ Use a step directly or follow the [workflow contract](docs/workflow-contract.md)
 With a current Codex CLI:
 
 ~~~sh
-codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.2.0
+codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.2.1
 codex plugin add davinci-workflow@davinci-workflow-skills
 ~~~
 
@@ -72,7 +61,7 @@ Start a new session. For an exact version, clone the tag below, then use /plugin
 ### Clone or install individual skills
 
 ~~~sh
-git clone --branch v0.2.0 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
+git clone --branch v0.2.1 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
 ~~~
 
 Copy desired skill folders into your client's skill directory: current Codex uses ~/.agents/skills/ and Claude Code uses ~/.claude/skills/. Review before overwriting existing same-name skills. Keep the clone for prompts and templates. No install script changes your assistant settings.

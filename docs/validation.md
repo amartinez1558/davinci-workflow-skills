@@ -1,4 +1,4 @@
-# Validation — 0.2.0
+# Validation — 0.2.1
 
 **Index:** [Baseline](#baseline) · [Checks](#checks) · [Behavioral scenarios](#behavioral-scenarios) · [Limits](#limits)
 
@@ -17,6 +17,8 @@ Version 0.1.4 updates Edit, B-roll and Fairlight to skill version 0.1.1: avoid p
 Version 0.1.5 adds focused guidance for live request markers, bin/track cleanup, intentional black music lead-ins, caption style propagation and newly inserted ungraded shots. The live editing exercise used existing native items and preserved source/proxy identities; this package includes no project media. Independent instruction review and release checks are recorded below.
 
 Version 0.2.0 adds the Titles workflow, human-review guide/diagram, and compact recovery/evidence guidance. Fusion now owns composition mechanics while Titles owns reference interpretation and typography. A new package regression rejects a release missing Titles: it failed against 0.1.5 and passes with the nine-skill package. The standard-library validator, all 12 package/CSV tests, and the system skill-creator frontmatter validator for all nine skills passed locally.
+
+Version 0.2.1 replaces the README diagram with a static SVG after the browser displayed “Unable to render rich display” for the Mermaid block. The SVG is XML-checked, contains seven workflow nodes and has accessible title/description text without scripts or external fonts. Package and regression checks were repeated.
 
 Release checks cover nine skills' frontmatter/naming/versioning, coherent manifests, marketplace source paths, internal documentation links and CSV structure. Run:
 
