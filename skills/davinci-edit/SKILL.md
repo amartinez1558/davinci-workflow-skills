@@ -1,8 +1,8 @@
 ---
 name: davinci-edit
-description: Use when assembling or revising a DaVinci Resolve story edit from a brief, script, interviews, review notes, and B-roll, including captions, lower thirds, title cards, and version preservation.
+description: Use when assembling or revising a DaVinci Resolve story edit from a brief, script, interviews, review notes, and B-roll, including dialogue trims, caption timing, and version preservation.
 metadata:
-  version: '0.1.2'
+  version: '0.1.3'
 ---
 
 # DaVinci edit
@@ -38,10 +38,8 @@ Use visible draft placeholders when the brief calls for them; a text overlay on 
 - Preserve approved spoken wording in a native editable subtitle track and matching sidecar when required. Keep burned captions and editable captions aligned if a captioned review export is requested.
 - Prefer one-line cues grouped into complete phrases or clauses when that is the brief or established preference. Avoid orphan words and awkward cue boundaries. Measure rendered width within safe margins and check reading time against delivery pace; do not copy a previous film's font size or character limit blindly.
 - A translucent dark caption backing can provide contrast without a black text outline; do not add a stroke automatically. Honor a no-outline preference in the native track style, any clip overrides, and external caption-burn settings while retaining the backing and safe placement.
-- Keep lower thirds near the lower safe edge with clear separation from captions. Check the longest name/year in actual frames. Use confirmed identity text; visibly flag missing information rather than guessing. Example people may be Jane Doe and John Doe.
-- Use a simple native style/template where practical. Say when a panel is custom rather than claiming it is a stock template. Reframe interview headroom modestly from suitable originals, checking each face and crop at delivery resolution.
-- When the user asks to avoid duplicated title text and subtitles, suppress only cues whose spoken content is fully represented by the card, for the matching interval. Retain other dialogue captions and preserve a full transcript separately if needed. Do not remove subtitles merely because any title is on screen.
-- Keep title-card hierarchy concise: prioritize the requested message, omit redundant video-name labels when requested, and increase relative type size with a frame check rather than adding more text. Preserve exact approved quotations and requested text removals.
+- Coordinate titles/name cards through [davinci-titles](../davinci-titles/SKILL.md) when available. Independently preserve approved wording and identities, inspect actual lower-third/caption clearance, and suppress only exact title-duplicate cues when requested, for the interval fully represented by the card. Retain adjacent dialogue and a full transcript.
+- For human trimming reviews, generate the requested table from the actual subtitle/script rows of the reviewed cut, with elapsed timestamps and a clear removal column. Preserve the recipient's schema and wording; distinguish deleting a spoken passage from hiding a caption. Regenerate or map review times after edits rather than applying an old table to a newer cut.
 
 ## Verify the revision
 

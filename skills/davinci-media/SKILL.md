@@ -2,7 +2,7 @@
 name: davinci-media
 description: Use when ingesting, organizing, identifying, proxying, or relinking media for DaVinci Resolve, including storage-aware source preparation and recoverable project milestones.
 metadata:
-  version: '0.1.1'
+  version: '0.1.2'
 ---
 
 # DaVinci media
@@ -29,7 +29,8 @@ When bin organization is requested, inventory Media Pool identities and source/p
 5. Encode to a temporary derivative, validate it, then publish it to the canonical proxy path. Preserve an existing known-good derivative until the replacement passes. Quarantine failed generated files rather than silently treating them as complete; never quarantine the camera original as part of this routine.
 6. Compare source and proxy frame count, rational fps, timecode, duration, audio layout/sync, orientation, and expected raster. Verify declared data range and color handling against the decoded image and a native Resolve comparison; tags alone are insufficient. Test a representative first/middle/last frame and playback sample. If frame count is absent from metadata, obtain a counted value rather than interpreting absence as equality.
 7. Attach the derivative using native **Link Proxy Media** or its supported API, retaining the Media Pool item's original path. Verify the resulting proxy path and actual proxy playback. Do not replace the original Media Pool item with the proxy or merely import both and call them linked.
-8. Record the canonical proxy per source, verification evidence, failures, and any generated extras. Check the expected source count against unique canonical links, not every file in the proxy directory.
+8. For source replacement, test one timeline item first. Verify original/working frame count, rate, timecode/range and matched source frames, then preserve source handles, speed mapping, framing, grades, effects and audio. Inspect take selection and actual source path after the operation. A rejected retimed-take operation is attempted work, not a conform; retain the working source and report the limit instead of rebuilding or replacing shared media globally.
+9. Record the canonical proxy per source, verification evidence, failures, and any generated extras. Check the expected source count against unique canonical links, not every file in the proxy directory.
 
 ## Finish and hand off
 

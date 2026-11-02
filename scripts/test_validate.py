@@ -47,6 +47,11 @@ class PackageValidationTests(unittest.TestCase):
     def test_valid_package_is_accepted(self):
         validate(self.root)
 
+    def test_missing_titles_workflow_is_rejected(self):
+        shutil.rmtree(self.root / 'skills/davinci-titles', ignore_errors=True)
+        with self.assertRaisesRegex(ValueError, 'declared skills'):
+            validate(self.root)
+
     def test_claude_marketplace_requires_owner_name(self):
         path = self.root / '.claude-plugin/marketplace.json'
         original = json.loads(path.read_text())

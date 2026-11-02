@@ -1,13 +1,13 @@
 ---
 name: davinci-fusion
-description: Use when creating or revising titles, lower thirds, motion graphics, or Fusion compositions in DaVinci Resolve, including rendered typography and subtitle clearance checks.
+description: Use when building or repairing Fusion node graphs, editable motion graphics, text shading, animation, alpha, or compositing in DaVinci Resolve.
 metadata:
-  version: '0.1.0'
+  version: '0.1.1'
 ---
 
-# Titles and Fusion
+# Fusion construction and compositing
 
-Create readable graphics that support the edit. Use native Text+, Fusion compositions, or existing templates when editable text, animation, or compositing is needed. A static graphic can use a suitable raster or vector asset; do not force a Fusion build solely because this skill is loaded.
+Build the smallest editable composition that provides the requested controls. Reuse native nodes, existing templates and supplied example graphs. A static graphic can use an appropriate asset; do not force a Fusion build solely because this skill is loaded. For reference interpretation and title design, use [davinci-titles](../davinci-titles/SKILL.md) when available; the construction safeguards below apply independently.
 
 For the broader project workflow, consult [workflow contract](../../docs/workflow-contract.md) when available. The safeguards here apply when this folder is installed alone.
 
@@ -17,13 +17,14 @@ For the broader project workflow, consult [workflow contract](../../docs/workflo
 - Establish the requested text, hierarchy, display duration, and delivery size from the brief. Confirm identities and exact quotations; use approved placeholders such as `Jane Doe · [Student year]` rather than inventing missing details.
 - Inspect available tool/API documentation before constructing or modifying nodes. Use the native UI when a required control is unavailable through scripting; do not invent an API or silently substitute a different effect.
 
-## Build the smallest readable design
+## Construct and connect
 
-- Make the main statement large enough for the intended viewing device. Favor a clear hierarchy, short copy, restrained fades, and sufficient contrast over decorative labels. Avoid repeating the video name on every card or adding commentary absent from the brief.
-- Fit text within title-safe space at the actual aspect ratio. Use localized backing when needed; its opacity and extent should support readability without covering unnecessary picture.
-- Position lower thirds clear of faces, subtitles, and other overlays. Inspect the worst combination of a long name, two-line caption, and busy or bright background.
-- When a card repeats the same spoken phrase, remove its redundant subtitle cues only when that presentation is requested or established. Preserve adjacent cues and timing, and retain a clear record of intentional removals.
-- A requested native Color FX vignette belongs on the intended Color node or adjustment structure. A PNG vignette or Fusion darkening overlay does not satisfy an explicit native Color effect requirement. Verify the effect exists once at the intended scope.
+- Inspect actual node types, connections and supported input IDs before setting values. A successful assignment to an unknown or inactive input does not establish a working effect; read it back and inspect the image.
+- Keep text, shading, shadow/backing and animation controls editable and named by purpose. Reuse a proven graph for related instances while preserving each instance's text, placement and duration. Avoid repeated script copies tied to version names; separate per-project content from the shared construction.
+- Check merge order, foreground/background inputs, alpha and premultiplication when adding blur, shadows or transparency. Inspect over both bright and dark footage for halos, clipped effect bounds or an unexpected full-frame plate.
+- Preserve composition frame bounds and map animation keys to the item's actual local time. Verify entrance, hold and exit at playback speed; a fully visible middle frame does not prove a fade or animation works.
+- Change spoken captions only when requested or established: suppress only wording fully duplicated by a title for the matching interval, preserving adjacent dialogue and a full transcript. A title or name card alone is not a reason to hide captions.
+- A native Color FX or adjustment-layer request requires that native effect at its intended scope. A Fusion/raster substitute is not equivalent; use the installed API or UI and verify it exists once.
 
 ## Verify the actual result
 

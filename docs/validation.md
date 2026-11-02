@@ -1,4 +1,4 @@
-# Validation — 0.1.5
+# Validation — 0.2.0
 
 **Index:** [Baseline](#baseline) · [Checks](#checks) · [Behavioral scenarios](#behavioral-scenarios) · [Limits](#limits)
 
@@ -16,7 +16,9 @@ Version 0.1.4 updates Edit, B-roll and Fairlight to skill version 0.1.1: avoid p
 
 Version 0.1.5 adds focused guidance for live request markers, bin/track cleanup, intentional black music lead-ins, caption style propagation and newly inserted ungraded shots. The live editing exercise used existing native items and preserved source/proxy identities; this package includes no project media. Independent instruction review and release checks are recorded below.
 
-Release checks cover eight skills' frontmatter/naming/versioning, coherent manifests, marketplace source paths, internal documentation links and CSV structure. Run:
+Version 0.2.0 adds the Titles workflow, human-review guide/diagram, and compact recovery/evidence guidance. Fusion now owns composition mechanics while Titles owns reference interpretation and typography. A new package regression rejects a release missing Titles: it failed against 0.1.5 and passes with the nine-skill package. The standard-library validator, all 12 package/CSV tests, and the system skill-creator frontmatter validator for all nine skills passed locally.
+
+Release checks cover nine skills' frontmatter/naming/versioning, coherent manifests, marketplace source paths, internal documentation links and CSV structure. Run:
 
 ~~~sh
 python3 scripts/validate.py
@@ -53,6 +55,17 @@ For 0.1.4, one independent subagent read the changed skills and applied them to 
 No blocking conflict was found. This is instruction-based validation, not a new live Optical Flow or Dynamic Zoom test.
 
 For 0.1.5, an independent agent applied the six changed skills to five read-only scenarios: native cleanup with archived versions and portrait composites; resolved, hidden and unrelated markers; a music-only black lead-in with source silence; no-outline captions across native overrides and an external burn; and new Sony log beside baked proxies and phone HLG. The agent preserved the live edit and media links, kept required layers/effects/timing, retained hidden unresolved requests, refit continuous music without duplicating its opening, propagated caption styling, and avoided double transforms. No blocking ambiguity was found. This was hypothetical instruction review, not a new runtime, installation, listening or calibrated-display test.
+
+For 0.2.0, baseline instruction review identified gaps in multimodal reference extraction, glyph repair, uncertain-operation recovery and stabilization acceptance. It did not demonstrate new live runtime failures. An independent forward review then exercised four read-only scenarios:
+
+| Scenario | Observed decision |
+| --- | --- |
+| Conflicting tutorial/project references, plate-free names, Unicode glyphs, save-only | Titles handles design; Fusion handles construction. Preserve approved spelling, check coverage/fallbacks and actual motion; save without an unrequested render. |
+| Partial nodes, rejected retimed source swap, hidden audit tracks, static B-roll | Reconcile live evidence; preserve manual differences and working media. Restore only temporary audit states; compare stabilization in matching motion intervals. |
+| Export after manual changes, ambiguous mode enum, unrelated queued job, external captions | Carry forward delivery choices; inspect installed API/job readback; start owned jobs only and verify caption/native/encoded agreement. |
+| Old trim table, later-event footage, nontechnical editor | Map reviewed-version speech anchors before cutting; distinguish caption hiding from speech deletion; keep exact-event requests open and suggest technical defaults. |
+
+Review found two standalone conflicts and they were corrected: Color now conditions encoded-sample checks on authorization or a current matching render; Fusion retains a compact exact-duplicate caption safeguard when installed alone. The README diagram and detailed guide carry forward existing authorization. These are instruction-based checks, not a new Resolve edit/render, installation or calibrated-display test.
 
 ## Limits
 

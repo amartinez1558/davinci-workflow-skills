@@ -8,7 +8,7 @@ Use the DaVinci workflow skills to complete this video project.
 Goal/audience/platform:
 Deliverable: [separate smaller clips / one film / both]
 Runtime/deadline:
-Style/references and pacing:
+Style/references and pacing (link tutorial section, screenshot or example project):
 Project name/root and open timeline:
 New edit or revision? Reviewed version and feedback link/file:
 Recent manual changes to preserve:
@@ -41,7 +41,7 @@ read-only preparation while waiting, but wait on dependent work.
 
 Preserve live manual edits and originals. Maintain a plan, source/proxy
 map, version-relative request audit and .drp/.drt milestones. Use Media,
-Edit/B-roll, Fusion, Color, Fairlight, Export and Dropbox as needed.
+Edit/B-roll, Titles, Fusion, Color, Fairlight, Export and Dropbox as needed.
 Inspect tool support rather than inventing calls; request native
 intervention only where necessary.
 

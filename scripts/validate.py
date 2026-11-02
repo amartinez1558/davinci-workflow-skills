@@ -10,7 +10,7 @@ from urllib.parse import unquote, urlsplit
 
 SKILLS = {
     'davinci-media', 'davinci-edit', 'davinci-broll', 'davinci-fusion',
-    'davinci-color', 'davinci-fairlight', 'davinci-export',
+    'davinci-color', 'davinci-fairlight', 'davinci-export', 'davinci-titles',
     'dropbox-media-management',
 }
 SCRIPT_HEADER = ['id', 'section', 'speaker', 'spoken_text', 'edit_notes',
@@ -92,7 +92,7 @@ def validate(root):
             'marketplace identities differ')
 
     folders = {path.name for path in (root / 'skills').iterdir() if path.is_dir()}
-    require(folders == SKILLS, 'skills directory must contain the eight declared skills')
+    require(folders == SKILLS, 'skills directory must contain the declared skills')
     for folder in sorted(folders):
         path = root / 'skills' / folder / 'SKILL.md'
         text = path.read_text(encoding='utf-8')
@@ -135,4 +135,4 @@ if __name__ == '__main__':
     except (ValueError, OSError, KeyError, TypeError, csv.Error) as error:
         print(f'Validation failed: {error}', file=sys.stderr)
         sys.exit(1)
-    print('Release manifests, eight skills, relative links, and CSV templates are valid.')
+    print(f'Release manifests, {len(SKILLS)} skills, relative links, and CSV templates are valid.')

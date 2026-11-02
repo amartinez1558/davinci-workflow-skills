@@ -8,6 +8,12 @@ Read the current brief, later corrections, script and reviewed-version feedback.
 
 Ask for missing decisions affecting the result: separate clips versus one film, timeline/delivery rate, audience/runtime, authoritative script, identities, captions, music rights, style, storage budget and destination. Inspect available sources first. Continue independent reversible preparation while waiting. Do not guess identity, delete originals or invent footage.
 
+## Resume and review
+
+For failed chats or uncertain partial operations, use [recovery and evidence](recovery-and-evidence.md). Keep full inventories and measurements locally, use stable item/track/layer identities, and restore temporary audit/render states with readback before the final milestone. Completed work needs observable evidence; attempted work and accepted editorial choices are separate states.
+
+For editor-facing checkpoints, trim tables and B-roll iteration, use the [human review guide](human-review-workflow.md). Carry forward decisions and authorization already given; ask only for missing choices that affect the result.
+
 ## Project layout
 
 ~~~text
@@ -29,7 +35,7 @@ Choose paths from the user's environment. Keep the live Resolve library/database
 | --- | --- |
 | Media / Dropbox | Source/proxy map, exact fps/timecode/range, identity/provenance, residency and disk budget |
 | Edit / B-roll | Live snapshot, source map, retimes, request audit, reviewed-version time mapping |
-| Fusion | Editable text/comps, safe placement, intentional caption suppression, native effect scope |
+| Titles / Fusion | Style/role specification, editable text/comps, safe placement, intentional caption suppression, native effect scope |
 | Color | Input/output path, transforms once, references, proxy comparisons and capture limits |
 | Fairlight | Takes/channels, sync offsets/drift, mix settings, listening and measurements |
 | Export | Exact file/version, jobs/settings, QC, captions, cloud status and outstanding review |

@@ -2,7 +2,7 @@
 name: davinci-broll
 description: Use when selecting, inspecting, sequencing, or replacing B-roll in DaVinci Resolve, mapping footage to narration, avoiding misleading event coverage, or reporting missing footage.
 metadata:
-  version: '0.1.2'
+  version: '0.1.3'
 ---
 
 # DaVinci B-roll
@@ -45,6 +45,14 @@ If the match fails, retain the relevant interview face, find a better shot, or r
 - Introduce real variety through scale, angle, action, context, and composition. Do not achieve no-repeat bookkeeping by selecting nearly identical moments from different files or tiny adjacent ranges.
 - Prefer footage captured at a sufficiently high source frame rate for the intended slowdown and timeline rate. Generally keep 24/30 fps footage (including 23.976/29.97) at normal speed. If low-frame-rate footage must be slowed, set the clip's Retime Process to Optical Flow for smoother playback, verify the setting, and inspect rendered motion for warping or other interpolation artifacts. Check source handles and internal cuts; do not accidentally retime interview speech or move approved dialogue.
 - For Ken Burns effects on stills, place the original image on the timeline and use Resolve's native Dynamic Zoom instead of pre-rendering the movement into a video clip. Keep the framing and motion editable; check the start/end crop, subject placement, and playback.
+
+## Stabilize only the motion that needs it
+
+Inspect motion before selecting static B-roll for stabilization. Distinguish unwanted jitter from a deliberate pan, tilt, handheld move, aerial or timelapse. Prefer a restrained supported mode; similarity/translation can avoid perspective deformation on rigid architecture, but verify the actual shot. Record source/proxy limitations rather than implying an all-original pass.
+
+Test a reversible instance, read back mode/strength, crop/zoom, camera-lock and bypass state, and compare motion over the same source/time interval with matching grade, framing and look visibility. Inspect playback or decoded temporal samples for wobble, breathing, rolling-shutter distortion, borders, lost edge content and noise; a still or success flag does not establish stability. Translation/jitter estimates may supplement inspection but do not measure every deformation. Keep useful camera movement and bypass/revert treatments that add crop or artifacts without benefit.
+
+Report only retained, verified stabilization as added: timeline/version, elapsed range and rate, source/item identity, settings, comparison evidence and remaining limits. List analyzed-only or bypassed trials separately.
 
 ## Keep time domains explicit
 

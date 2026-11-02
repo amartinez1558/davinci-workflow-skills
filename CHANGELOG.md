@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.0 — 2026-11-02
+
+- Add `davinci-titles` for reference-led typography, differentiated title/name-card roles, glyph repair and styles that can expand without duplicating the workflow.
+- Focus Fusion on editable graph construction, animation, shading and alpha; route title-design decisions to the new skill.
+- Add an editor-facing human review loop, README diagram and fuller guide for trim tables, precise B-roll requests, manual revisions and delivery decisions.
+- Recover interrupted image-heavy sessions from live state and compact local evidence; distinguish attempted, applied, verified and bypassed operations.
+- Preserve retimed items during source-replacement tests and verify recoverable external dependencies.
+- Evaluate static B-roll stabilization in matching motion comparisons while preserving intentional camera moves.
+- Strengthen additive-grade, audit-state restoration, render-mode/readback, caption and native/encoded comparison guidance.
+- Require all nine workflow skills in package validation; retain existing skill names and template schemas.
+
 ## 0.1.5 — 2026-10-31
 
 - Reconcile request markers against the current edit and preserve unrelated editorial notes.

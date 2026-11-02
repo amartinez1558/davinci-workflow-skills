@@ -2,7 +2,7 @@
 name: davinci-color
 description: Use when diagnosing exposure or color mismatches, comparing originals and proxies, applying input transforms, or matching and validating grades in DaVinci Resolve.
 metadata:
-  version: '0.1.1'
+  version: '0.1.2'
 ---
 
 # Color diagnosis and finishing
@@ -31,11 +31,13 @@ For project-wide practices, consult [workflow contract](../../docs/workflow-cont
 
 - Balance exposure and white balance per shot, then compare with approved reference stills and adjacent shots. Retain the distinction between sun, shade, interiors, and colored stage lighting; do not force every face to one brightness or hue target.
 - Apply restrained display finishing after the technical transform. Example CDLs from another project are historical settings, not universal recipes. Reassess the input balance when lighting changes.
+- Inspect existing finishing nodes before adding corrections. Preserve per-instance manual differences; a source-wide copy or shared group must not overwrite them or affect prior versions. An additive display trim in an empty final LUT slot can preserve existing primaries, but verify processing order, enabled/mix state, sampled output and external LUT dependencies. Do not use a display LUT as a substitute for scene-referred exposure correction or a reason to clip valid signal.
 - Check interview consistency across all cut pieces and related cameras. Baked low-bit-depth copies can limit secondaries and highlight work; use originals selectively when the requested improvement requires them.
+- Before comparing scopes or original/proxy stills, match creative-look/overlay visibility and playback preference. Restore intended editing states after the audit and verify the final composite; a technically improved underlying image can behave differently under the creative look.
 - If the brief requires a native Color FX vignette, verify it on the intended timeline/clip node and avoid duplicate applications. A raster overlay is not an equivalent implementation.
 
 ## Validate and hand off
 
-Inspect native scopes and stills, then export and decode a sample through the actual delivery path. Compare the decoded image with the native result; check render proxy/cache settings and actual source paths rather than calling a mixed-source edit an all-original conform. Save the color path, changed shots, original/proxy comparisons, unresolved clipping/noise, and milestone.
+Inspect native scopes and stills. When export is authorized or a current matching render exists, decode a sample through the actual delivery path; otherwise report encoded-output checks deferred. Compare the decoded image with the native result when available; check render proxy/cache settings and actual source paths rather than calling a mixed-source edit an all-original conform. Save the color path, changed shots, original/proxy comparisons, unresolved clipping/noise, and milestone.
 
 State whether review used a calibrated display and whether every shot was checked at original resolution. Sampled frames and metadata cannot establish calibrated color approval or recovered capture detail.

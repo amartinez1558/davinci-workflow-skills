@@ -37,6 +37,12 @@ Keep an existing project's settings unless a change is needed and explained.
 Preserve my originals and previous edits; save a new version.
 
 Check access to my files and give me a short plan.
+Show me a representative title/name card before repeating a new style.
+At rough-cut review, offer a simple timestamp/text/remove table for trims
+and a separate list of exact missing B-roll. Keep those tied to the version
+I watched. Apply my decisions, preserve later manual edits, and iterate.
+If I resume in a new chat, recover from the live project and compact local
+notes; don't import a large history of images or repeat uncertain edits.
 Ask up to three plain-language questions at a time
 only when needed, with suggested answers. Don't make me choose technical
 settings.
@@ -48,5 +54,7 @@ buying/downloading extra material or sharing outside my project.
 Use the DaVinci workflow skills. Check the sharing copy, save it alongside
 the project, and tell me where it is and what still needs my review.
 ~~~
+
+Follow the [human review loop](../docs/human-review-workflow.md) for what to supply, how to mark trims and request footage, and what the agent checks.
 
 Want detailed control later? Use the [advanced intake](project-intake-template.md).

@@ -1,8 +1,27 @@
 # DaVinci Workflow Skills
 
-Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.1.5 · MIT**
+Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.2.0 · MIT**
 
-**Index:** [Skills](#skills) · [Prerequisites](#prerequisites) · [Install](#install) · [Prompts and sheets](#prompts-and-sheets) · [Testing](#testing) · [Contribute](#contribute)
+**Index:** [Review loop](#human-and-agent-review-loop) · [Skills](#skills) · [Prerequisites](#prerequisites) · [Install](#install) · [Prompts and sheets](#prompts-and-sheets) · [Testing](#testing) · [Contribute](#contribute)
+
+## Human and agent review loop
+
+The human decides what the video should say and whether the edit works. The agent protects the project, makes revisions and checks the files.
+
+```mermaid
+flowchart TD
+    A["Human: goal, material and examples"] --> B["Agent: inspect, back up and build rough cut"]
+    B --> C["Human: review the viewing copy"]
+    C --> D["Human: mark trims and identify B-roll needs"]
+    D --> E["Agent: revise and track missing footage"]
+    E --> C
+    C -->|Ready to finish| F["Agent: titles, color, sound and output checks"]
+    F --> G["Human: final review"]
+    G -->|Changes| D
+    G -->|Approved delivery| H["Agent: deliver video, captions and open items"]
+```
+
+Read the [human review guide](docs/human-review-workflow.md) for what to supply, a simple trim table, precise B-roll requests, manual-edit preservation and final review. Reviews can be bundled; the agent carries forward choices and export authorization already given.
 
 ## Skills
 
@@ -11,7 +30,8 @@ Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per wor
 | Media | [davinci-media](skills/davinci-media/SKILL.md) | Inventory, milestones, bins and source-safe proxies |
 | Edit | [davinci-edit](skills/davinci-edit/SKILL.md) | Script assembly, revisions, captions and manual-edit preservation |
 | Edit: B-roll | [davinci-broll](skills/davinci-broll/SKILL.md) | Relevant coverage, continuity, variety and footage requests |
-| Fusion | [davinci-fusion](skills/davinci-fusion/SKILL.md) | Readable titles, lower thirds and verified composites |
+| Titles | [davinci-titles](skills/davinci-titles/SKILL.md) | Reference-led typography, name cards, style adaptation and glyph repair |
+| Fusion | [davinci-fusion](skills/davinci-fusion/SKILL.md) | Editable node graphs, animation, alpha and verified composites |
 | Color | [davinci-color](skills/davinci-color/SKILL.md) | Signal diagnosis, scopes, transforms and shot matching |
 | Fairlight | [davinci-fairlight](skills/davinci-fairlight/SKILL.md) | External-audio sync, dialogue, music and peak checks |
 | Export / Deliver | [davinci-export](skills/davinci-export/SKILL.md) | Smaller individual clips or verified final-film delivery |
@@ -34,7 +54,7 @@ Use a step directly or follow the [workflow contract](docs/workflow-contract.md)
 With a current Codex CLI:
 
 ~~~sh
-codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.1.5
+codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.2.0
 codex plugin add davinci-workflow@davinci-workflow-skills
 ~~~
 
@@ -52,7 +72,7 @@ Start a new session. For an exact version, clone the tag below, then use /plugin
 ### Clone or install individual skills
 
 ~~~sh
-git clone --branch v0.1.5 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
+git clone --branch v0.2.0 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
 ~~~
 
 Copy desired skill folders into your client's skill directory: current Codex uses ~/.agents/skills/ and Claude Code uses ~/.claude/skills/. Review before overwriting existing same-name skills. Keep the clone for prompts and templates. No install script changes your assistant settings.

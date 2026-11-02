@@ -1,11 +1,11 @@
 {
   "name": "davinci-workflow",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Story-first DaVinci Resolve workflows, from Dropbox ingest to verified delivery.",
   "skills": "./skills/",
   "interface": {
     "displayName": "DaVinci Workflow",
-    "shortDescription": "Media, Edit, Fusion, Color, Fairlight and Export skills",
+    "shortDescription": "Media, Edit, Titles, Fusion, Color and Export skills",
     "developerName": "amartinez1558",
     "category": "Productivity"
   }
