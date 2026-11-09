@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "davinci-workflow",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "DaVinci Resolve workflows for documentaries, recaps, promos and mixed videos, from ingest to verified delivery.",
   "author": {
     "name": "amartinez1558"

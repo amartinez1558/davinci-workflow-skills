@@ -1,6 +1,6 @@
 # DaVinci Workflow Skills
 
-Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.3.0 · MIT**
+Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.3.1 · MIT**
 
 **Index:** [Review loop](#human-and-agent-review-loop) · [Skills](#skills) · [Prerequisites](#prerequisites) · [Install](#install) · [Prompts and sheets](#prompts-and-sheets) · [Testing](#testing) · [Contribute](#contribute)
 
@@ -45,7 +45,7 @@ Use a step directly or follow the [workflow contract](docs/workflow-contract.md)
 With a current Codex CLI:
 
 ~~~sh
-codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.3.0
+codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.3.1
 codex plugin add davinci-workflow@davinci-workflow-skills
 ~~~
 
@@ -63,7 +63,7 @@ Start a new session. For an exact version, clone the tag below, then use /plugin
 ### Clone or install individual skills
 
 ~~~sh
-git clone --branch v0.3.0 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
+git clone --branch v0.3.1 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
 ~~~
 
 Copy desired skill folders into your client's skill directory: current Codex uses ~/.agents/skills/ and Claude Code uses ~/.claude/skills/. Review before overwriting existing same-name skills. Keep the clone for prompts and templates. No install script changes your assistant settings.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.1 — 2026-11-09
+
+- Require visible staging folders and prefer temporary renders outside Dropbox sync.
+- Finish delivery by verifying final output paths and removing redundant staged copies and task-generated temporary assets, while protecting linked media and backups.
+- Ask before deleting previous delivered output versions, listing candidate filenames and sizes.
+
+
 ## 0.3.0 — 2026-11-09
 
 - Support dialogue-led, music/action-led and mixed edits without requiring documentary scripts or caption review for every video.

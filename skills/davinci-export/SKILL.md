@@ -2,7 +2,7 @@
 name: davinci-export
 description: Use when exporting smaller graded clips or a finished timeline from DaVinci Resolve, re-exporting manual revisions, selecting render jobs, and checking encoded delivery files and captions.
 metadata:
-  version: '0.1.3'
+  version: '0.1.4'
 ---
 
 # Export and delivery
@@ -27,7 +27,7 @@ Make the requested deliverable from the current approved timeline, verify it, th
 
 ## Stage, check, then publish
 
-- Render to a staging destination. Preserve an existing delivered version and its companions before replacement. Check storage headroom for intermediates and backup files; never delete source originals to make an export fit.
+- Use a visible staging destination such as `staging/`; do not create dot-prefixed hidden staging folders. Prefer staging outside Dropbox sync when practical to avoid uploading temporary renders. Preserve an existing delivered version and its companions before replacement. Check storage headroom for intermediates and backup files; never delete source originals to make an export fit.
 - Verify job success and nonempty output, then probe dimensions, frame rate, frame count/duration, audio streams/channels, and expected filenames/count for clip batches. Compare against source/timeline expectations, including intentional retiming.
 - Recheck newly added or slipped source ranges for color interpretation, action/motion and synchronized audio even after an earlier finishing milestone. A prior version’s QC does not cover new frames; preserve the user’s edits and report issues outside the requested export scope.
 - Decode the full deliverable for technical errors when feasible. Inspect decoded frames at intro/outro fades, graphics, changed shots, transitions, and representative caption intervals. Check that burned captions actually appear, remain readable, and clear lower thirds; native subtitle positioning can differ in the rendered output.
@@ -38,6 +38,8 @@ Make the requested deliverable from the current approved timeline, verify it, th
 - Compare the live timeline with the pre-export snapshot to catch accidental changes during rendering. Save the delivered milestone and a short QC record tied to the exact final file, optionally including a checksum for replacement/sync verification.
 - Publish the checked file and matching companions only after QC passes. For a cloud-backed destination, verify the final local file and the provider's sync/upload state when available; file existence alone proves neither remote availability nor successful upload. Report unverified cloud state honestly.
 
-When staging cleanup is authorized, remove only identified generated diagnostics or superseded review renders after confirming the checked deliverable exists. Protect the latest user exports, backups and any intermediates still linked by the project; a staging-folder name alone does not prove its contents are disposable.
+After QC, move the deliverable and required companions into `output/` (or the agreed final destination) and verify them at their final paths. If publication requires copying, verify the destination before deleting the staged copies. As part of delivery, remove this task’s unneeded generated staging assets and diagnostics, then remove empty staging folders; report any retained files and why. Keep originals, backups, proxies and intermediates still linked by the project. Do not delete a folder wholesale merely because it is named staging, and do not clean unrelated or pre-existing files without authorization.
+
+Previous delivered output versions are separate from temporary staging. Ask whether the user wants to clean them up, naming the candidate versions and their sizes; keep them until the user approves the specific cleanup. Do not treat a new export as permission to delete older delivered versions.
 
 Report the final path, version, format, size, caption mode, checks performed, and remaining placeholders or review limits. Do not describe decoding or sampled frames as a full editorial, listening, or calibrated-color approval.

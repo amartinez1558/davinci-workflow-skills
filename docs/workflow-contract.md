@@ -25,11 +25,13 @@ video-project/
   assets/WAV/
   assets/Music/
   projects/             # plan, source map, audits, .drp/.drt milestones
-  scratch/              # cache/staging; outside sync if appropriate
+  staging/              # visible temporary renders; outside sync when practical
   output/               # checked deliverables and companions
 ~~~
 
 Choose paths from the user's environment. Keep the live Resolve library/database in a supported location, separate from Dropbox file sync. Export project/timeline milestones to the project folder. A .drp is a project backup, not a media archive.
+
+Use visible staging folders, never dot-prefixed hidden ones. After verified delivery to `output/`, remove redundant staged copies and this task’s disposable generated assets; retain linked dependencies, originals and backups. Ask before cleaning previous delivered output versions, with filenames and sizes. See Export and Dropbox for the cleanup boundary.
 
 ## Handoffs
 

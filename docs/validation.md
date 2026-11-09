@@ -1,4 +1,4 @@
-# Validation — 0.3.0
+# Validation — 0.3.1
 
 **Index:** [Baseline](#baseline) · [Checks](#checks) · [Behavioral scenarios](#behavioral-scenarios) · [Limits](#limits)
 
@@ -76,6 +76,12 @@ Evidence came from a recap revision with later live manual changes and an earlie
 An independent baseline scenario applied the old instructions to mixed-rate phone clips, slipped/locked music, complete action payoffs and a spoken group ending. It found existing protection for manual edits, meaningful holds and sound balance; missing or underdeveloped guidance concerned action-based review rows, explicit beat/phrase mapping through source slips, and track-lock troubleshooting. The agent inferred some good behavior without explicit guidance, so this was a coverage-gap review, not a demonstrated live-edit failure.
 
 Release checks: the standard-library repository validator, all 12 existing package/CSV tests, and Git whitespace checks passed. These documentation changes add no executable workflow or dependency. Independent forward review applied the draft to the recap, a dialogue-led documentary with no export, a tutorial with required step order, slipped-music beat arithmetic, a later manual closing-card choice and clipped HDR highlights. It retained mode-specific ordering and live choices, mapped the example beat from 8.4 to 7.9 seconds after a 0.5-second source slip, avoided fixed shot/grade defaults and rejected preset acceptance as picture verification. Review found an unconditioned encoded-check sentence in the recap reference; it was changed to respect render authorization or an existing matching render. This was instruction-level scenario testing, not a new edit/render or listening test.
+
+## 0.3.1 staging lifecycle
+
+The prior instructions allowed unspecified staging destinations and only conditional cleanup, without explicitly offering cleanup of older deliveries. Export, Dropbox and the shared layout now require visible staging for new work and finish delivery by verifying final paths before removing redundant task-generated staged files. Previous output versions require a separate user decision with filenames and sizes.
+
+An independent read-only scenario covered a cross-volume copy, unknown pre-existing hidden staging, current drafts, a linked intermediate, two older deliveries and camera originals. It retained unknown files and dependencies, verified the destination before deleting the staged copy, removed only disposable task-owned staging, and asked before deleting older deliveries. Existing hidden folders do not become disposable under the new naming rule. Repository validation, all 12 package/CSV tests and whitespace checks passed. No actual cleanup, cross-volume transfer or Dropbox sync test was performed for this release.
 
 ## Limits
 

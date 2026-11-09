@@ -2,7 +2,7 @@
 name: dropbox-media-management
 description: Use when managing Dropbox-backed video assets, hydrating originals for Resolve, reclaiming local space with online-only files, or verifying delivery sync without losing originals or working proxies.
 metadata:
-  version: '0.1.0'
+  version: '0.1.1'
 ---
 
 # Dropbox media management
@@ -32,7 +32,9 @@ Manage local residency and cloud copies as separate states. A visible filename, 
 4. Observe the resulting Dropbox status and local residency. Recheck free space and count originals still resident, online-only originals, and locally resident canonical proxies. Eviction may be asynchronous or partial; report actual counts and pending files without repeatedly cycling the same request.
 5. Confirm Resolve can continue using the linked local proxies after originals become online-only. Original-backed rendering, stabilization, or later probing may rehydrate them. Recheck residency after those operations rather than assuming the earlier cleanup persists.
 
-Only remove generated intermediates when the requested cleanup covers them, their role is understood, and a verified replacement and required recovery milestone exist. Preserve previous delivered exports before replacing them when the task calls for a re-export. Do not infer original deletion permission from a request to save local space.
+Use visible temporary folders such as `staging/`, never dot-prefixed hidden staging folders; prefer temporary renders outside Dropbox sync when practical. After a checked delivery is moved to `output/` (or the agreed final destination) and verified at the final path, remove its redundant staged copies and this task’s unneeded generated staging assets, plus empty staging folders. When copying across volumes, verify the destination before deleting the staged copy. Protect originals, canonical proxies, recovery milestones and linked intermediates; retain uncertain or unrelated files and report them. Deletion inside Dropbox can remove the cloud copy too.
+
+Ask whether the user wants to clean up previous delivered output versions, listing candidate filenames/versions and sizes. Preserve them until that cleanup is approved; a re-export authorizes removal of its own disposable staging, not older deliveries. Do not infer original deletion permission from a request to save local space.
 
 ## Verify delivery and report
 
