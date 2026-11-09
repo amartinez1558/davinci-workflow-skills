@@ -2,7 +2,7 @@
 name: davinci-fairlight
 description: Use when synchronizing external dialogue recordings, editing interviews, cleaning and mixing speech with music, or validating final encoded audio in DaVinci Resolve and Fairlight.
 metadata:
-  version: '0.1.2'
+  version: '0.1.3'
 ---
 
 # Dialogue and Fairlight
@@ -12,6 +12,8 @@ Make speech clear, preserve natural delivery, and verify audio in the encoded de
 ## Preserve and synchronize
 
 - Inspect the live timeline, routing, channel mapping, clip gains, effects, automation, and source recordings before changing them. Save a milestone and snapshot source in/out points, offsets, track placement, and current mix settings so manual edits survive.
+- For camera files with stereo plus auxiliary or spatial streams, inspect the imported channel mapping, destination track format and bus routing. Verify the intended channels reach the output once; mute unintended duplicate streams deliberately. Listen for the required words and complete reaction in the encoded mix: nonzero signal may be music, noise or the wrong channels.
+- If an audio trim or insertion fails, inspect track locks before rebuilding the cue or retrying. Restore any temporarily changed lock state after the authorized adjustment.
 - Keep original recordings, including 32-bit float WAVs, untouched. Make separate working files when processing is needed; prevent clipping during conversion to fixed-point audio. Float storage does not guarantee the microphone or analog front end avoided clipping.
 - Match external WAVs to camera scratch audio using waveform correlation or Resolve sync. Confirm the correct take and polarity/channel behavior; filenames and transcription are insufficient proof.
 - Check alignment near the beginning, middle, and end, especially on long interviews. Record offsets and residual drift. Use timing correction only when drift is demonstrated, then recheck the entire used range and visible lip sync.

@@ -1,4 +1,4 @@
-# Validation — 0.2.1
+# Validation — 0.3.0
 
 **Index:** [Baseline](#baseline) · [Checks](#checks) · [Behavioral scenarios](#behavioral-scenarios) · [Limits](#limits)
 
@@ -68,6 +68,14 @@ For 0.2.0, baseline instruction review identified gaps in multimodal reference e
 | Old trim table, later-event footage, nontechnical editor | Map reviewed-version speech anchors before cutting; distinguish caption hiding from speech deletion; keep exact-event requests open and suggest technical defaults. |
 
 Review found two standalone conflicts and they were corrected: Color now conditions encoded-sample checks on authorization or a current matching render; Fusion retains a compact exact-duplicate caption safeguard when installed alone. The README diagram and detailed guide carry forward existing authorization. These are instruction-based checks, not a new Resolve edit/render, installation or calibrated-display test.
+
+## 0.3.0 recap and mixed-video update
+
+Evidence came from a recap revision with later live manual changes and an earlier documentary finishing/review conversation. The live recap was inspected read-only: later source slips, different moments from one source, varied durations, leveling/crop, boundary transitions, music extension and revised closing-card placement were present. These observations motivate flexible selection/preservation rules; they do not establish exact beat alignment, audio sync or approval of a numeric grade. No private project files, identifying source names or conversation links are included in the package.
+
+An independent baseline scenario applied the old instructions to mixed-rate phone clips, slipped/locked music, complete action payoffs and a spoken group ending. It found existing protection for manual edits, meaningful holds and sound balance; missing or underdeveloped guidance concerned action-based review rows, explicit beat/phrase mapping through source slips, and track-lock troubleshooting. The agent inferred some good behavior without explicit guidance, so this was a coverage-gap review, not a demonstrated live-edit failure.
+
+Release checks: the standard-library repository validator, all 12 existing package/CSV tests, and Git whitespace checks passed. These documentation changes add no executable workflow or dependency. Independent forward review applied the draft to the recap, a dialogue-led documentary with no export, a tutorial with required step order, slipped-music beat arithmetic, a later manual closing-card choice and clipped HDR highlights. It retained mode-specific ordering and live choices, mapped the example beat from 8.4 to 7.9 seconds after a 0.5-second source slip, avoided fixed shot/grade defaults and rejected preset acceptance as picture verification. Review found an unconditioned encoded-check sentence in the recap reference; it was changed to respect render authorization or an existing matching render. This was instruction-level scenario testing, not a new edit/render or listening test.
 
 ## Limits
 

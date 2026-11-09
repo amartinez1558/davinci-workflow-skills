@@ -1,8 +1,8 @@
 ---
 name: davinci-edit
-description: Use when assembling or revising a DaVinci Resolve story edit from a brief, script, interviews, review notes, and B-roll, including dialogue trims, caption timing, and version preservation.
+description: Use when assembling or revising documentaries, event recaps, promos, music montages, or mixed-format videos in DaVinci Resolve, including pacing, action selection, dialogue, captions, and manual edits.
 metadata:
-  version: '0.1.3'
+  version: '0.2.0'
 ---
 
 # DaVinci edit
@@ -16,6 +16,10 @@ Build the requested story while preserving the user's current work. Treat the cu
 - Build the next version from that live state. Preserve manual edits and prior versions; an export-only request uses the latest live edit rather than rebuilding an older schedule. Do not render when the user explicitly requests a saved edit without export.
 - Map review timestamps to the reviewed version. If timings changed, use dialogue/shot anchors to map them into the new version and label both time domains. Keep each comment traceable as fixed, partial, pending asset, or needing clarification.
 - When simplifying video tracks, move existing native items into non-conflicting tracks while preserving source ranges, precise timing, stacking/composite order, transitions, retimes, grades and Fusion effects. Retain the layers needed for sharp portrait foregrounds over blurred backgrounds. Delete tracks only after they are empty, and compare the visible result with the live checkpoint rather than flattening or rebuilding the edit.
+
+## Choose the editing approach
+
+Use the brief to decide what leads each section: speech and meaning for a dialogue-led story; action, reactions and musical phrases for a recap or montage; a combination for mixed videos. A script, interview introduction, caption track or dialogue trim table is not required for every video. Apply the dialogue-specific rules below where speech leads. For music-led sequences, read [recap and montage editing](references/recap-and-montage.md).
 
 ## Shape the story
 
@@ -39,13 +43,15 @@ Use visible draft placeholders when the brief calls for them; a text overlay on 
 - Prefer one-line cues grouped into complete phrases or clauses when that is the brief or established preference. Avoid orphan words and awkward cue boundaries. Measure rendered width within safe margins and check reading time against delivery pace; do not copy a previous film's font size or character limit blindly.
 - A translucent dark caption backing can provide contrast without a black text outline; do not add a stroke automatically. Honor a no-outline preference in the native track style, any clip overrides, and external caption-burn settings while retaining the backing and safe placement.
 - Coordinate titles/name cards through [davinci-titles](../davinci-titles/SKILL.md) when available. Independently preserve approved wording and identities, inspect actual lower-third/caption clearance, and suppress only exact title-duplicate cues when requested, for the interval fully represented by the card. Retain adjacent dialogue and a full transcript.
-- For human trimming reviews, generate the requested table from the actual subtitle/script rows of the reviewed cut, with elapsed timestamps and a clear removal column. Preserve the recipient's schema and wording; distinguish deleting a spoken passage from hiding a caption. Regenerate or map review times after edits rather than applying an old table to a newer cut.
+- For dialogue trimming reviews, generate the requested table from the actual subtitle/script rows of the reviewed cut, with elapsed timestamps and a clear removal column. Preserve the recipient's schema and wording; distinguish deleting a spoken passage from hiding a caption. Regenerate or map review times after edits rather than applying an old table to a newer cut.
 
 ## Verify the revision
 
 Record source timecode/frame indices separately from timeline frames and elapsed review time. Resolve source handles, inclusive/exclusive out conventions, clip start offsets, speed changes, and exact frame rates before applying a cut list. Verify a known source frame and a timeline boundary before bulk edits.
 
 Review transitions, story order, subject introductions, source identity, caption boundaries, title duplication, headroom, and lower-third clearance in the live timeline and sampled rendered frames when a render is authorized. Landscape-only briefs require checking displayed orientation and rotation metadata, not container dimensions alone. Inspect exposure per shot; defer color-specific work to an appropriate grading workflow rather than assuming one correction fits all footage.
+
+When resuming after final manual tweaks, compare the live edit and latest user export with the prior milestone by timeline instance and source range. Preserve deliberate reframes, leveling, split source moments, transitions, fades and music slips; do not infer that a matching filename means matching content or that every manual offset is verified sync. Treat the latest user choices as the current baseline, without turning their exact settings into defaults for another film.
 
 Compare the result with the live snapshot: unrelated audio, manual B-roll changes, effects, and approved timing should survive. Reconcile every requested change and remaining asset gap before calling the edit ready. State which playback, listening, lip-sync, reading, and color checks actually ran; sampled frames do not establish full human approval.
 

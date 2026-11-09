@@ -7,19 +7,21 @@ Use the DaVinci workflow skills to complete this video project.
 
 Goal/audience/platform:
 Deliverable: [separate smaller clips / one film / both]
+Video type and what leads: [documentary / recap / promo / tutorial / mixed; speech / music / action]
 Runtime/deadline:
 Style/references and pacing (link tutorial section, screenshot or example project):
 Project name/root and open timeline:
 New edit or revision? Reviewed version and feedback link/file:
 Recent manual changes to preserve:
-Authoritative script CSV/Sheet and media map:
+Authoritative script CSV/Sheet if applicable; media map and must-keep actions/reactions:
 Media roots/intake links and confirmed people/roles:
 External recordings/takes/channels:
 Camera formats/profiles, baked grades, licensed LUT:
 Timeline rate, resolution/aspect and output color space:
 Caption mode/language: [editable / burned / sidecar / none]
 Names/years/titles, intro/outro and approved quotations:
-Music source/license and mixing guidance:
+Music source/license, cue range/slip, beat or phrase pacing and mixing guidance:
+Section progression and closing scene/card order:
 True-peak ceiling and any loudness standard:
 Missing assets, acceptable alternatives and placeholders:
 Dropbox account/root, free space and working storage/reserve:

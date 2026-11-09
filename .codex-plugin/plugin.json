@@ -1,7 +1,7 @@
 {
   "name": "davinci-workflow",
-  "version": "0.2.1",
-  "description": "Story-first DaVinci Resolve workflows, from Dropbox ingest to verified delivery.",
+  "version": "0.3.0",
+  "description": "DaVinci Resolve workflows for documentaries, recaps, promos and mixed videos, from ingest to verified delivery.",
   "skills": "./skills/",
   "interface": {
     "displayName": "DaVinci Workflow",

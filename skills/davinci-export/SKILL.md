@@ -2,7 +2,7 @@
 name: davinci-export
 description: Use when exporting smaller graded clips or a finished timeline from DaVinci Resolve, re-exporting manual revisions, selecting render jobs, and checking encoded delivery files and captions.
 metadata:
-  version: '0.1.2'
+  version: '0.1.3'
 ---
 
 # Export and delivery
@@ -29,6 +29,7 @@ Make the requested deliverable from the current approved timeline, verify it, th
 
 - Render to a staging destination. Preserve an existing delivered version and its companions before replacement. Check storage headroom for intermediates and backup files; never delete source originals to make an export fit.
 - Verify job success and nonempty output, then probe dimensions, frame rate, frame count/duration, audio streams/channels, and expected filenames/count for clip batches. Compare against source/timeline expectations, including intentional retiming.
+- Recheck newly added or slipped source ranges for color interpretation, action/motion and synchronized audio even after an earlier finishing milestone. A prior version’s QC does not cover new frames; preserve the user’s edits and report issues outside the requested export scope.
 - Decode the full deliverable for technical errors when feasible. Inspect decoded frames at intro/outro fades, graphics, changed shots, transitions, and representative caption intervals. Check that burned captions actually appear, remain readable, and clear lower thirds; native subtitle positioning can differ in the rendered output.
 - Validate intentional black intervals against the brief instead of treating every black frame as a coverage failure. For a music-only lead-in, verify its exact duration, music presence, subsequent picture fade and narration/caption onset. Confirm requested caption styling in the final encode as well as the native settings.
 - If an authorized external caption burn or final encode is used, reuse the current project's proven compositor/settings when suitable, keeping content and version paths separate from reusable logic. Verify the final result against the native render, preserve cue timing, and check intentionally omitted title-duplicate cues. Retain editable captions and a sidecar when requested.
@@ -36,5 +37,7 @@ Make the requested deliverable from the current approved timeline, verify it, th
 - Compare native and encoded pictures with the same source/proxy preference, grade and frame; separate body and caption regions when only the final copy has burned captions. Match external cues against the live track and native sidecar where available, accounting for timeline start timecode.
 - Compare the live timeline with the pre-export snapshot to catch accidental changes during rendering. Save the delivered milestone and a short QC record tied to the exact final file, optionally including a checksum for replacement/sync verification.
 - Publish the checked file and matching companions only after QC passes. For a cloud-backed destination, verify the final local file and the provider's sync/upload state when available; file existence alone proves neither remote availability nor successful upload. Report unverified cloud state honestly.
+
+When staging cleanup is authorized, remove only identified generated diagnostics or superseded review renders after confirming the checked deliverable exists. Protect the latest user exports, backups and any intermediates still linked by the project; a staging-folder name alone does not prove its contents are disposable.
 
 Report the final path, version, format, size, caption mode, checks performed, and remaining placeholders or review limits. Do not describe decoding or sampled frames as a full editorial, listening, or calibrated-color approval.

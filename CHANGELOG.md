@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 — 2026-11-09
+
+- Support dialogue-led, music/action-led and mixed edits without requiring documentary scripts or caption review for every video.
+- Add recap guidance and a synthetic prompt: review complete actions/reactions, group related scenes, map actual music beats through source slips, vary shot lengths, and reconcile spoken endings with branding.
+- Adapt beginner/advanced intake and human review to shot/action notes; preserve later manual source ranges, reframes, transitions and music edits as the next baseline.
+- Refine HDR conversion checks, camera-audio routing, lock troubleshooting, revised-shot QC and authorized staging cleanup without fixed project presets.
+- Keep the existing nine-skill package; no project media, private history or licensed assets are included.
+
 ## 0.2.1 — 2026-11-02
 
 - Replace the README Mermaid block with an accessible static SVG after GitHub’s rich-diagram renderer failed to display it. Keep a single diagram source with no external fonts, scripts or rendering dependency.

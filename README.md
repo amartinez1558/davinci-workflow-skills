@@ -1,6 +1,6 @@
 # DaVinci Workflow Skills
 
-Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.2.1 · MIT**
+Reusable DaVinci Resolve skills for AI-assisted video editing. One skill per workflow step, shared by Codex and Claude Code. **Version 0.3.0 · MIT**
 
 **Index:** [Review loop](#human-and-agent-review-loop) · [Skills](#skills) · [Prerequisites](#prerequisites) · [Install](#install) · [Prompts and sheets](#prompts-and-sheets) · [Testing](#testing) · [Contribute](#contribute)
 
@@ -17,7 +17,7 @@ Read the [human review guide](docs/human-review-workflow.md) for what to supply,
 | Step | Skill | Outcome |
 | --- | --- | --- |
 | Media | [davinci-media](skills/davinci-media/SKILL.md) | Inventory, milestones, bins and source-safe proxies |
-| Edit | [davinci-edit](skills/davinci-edit/SKILL.md) | Script assembly, revisions, captions and manual-edit preservation |
+| Edit | [davinci-edit](skills/davinci-edit/SKILL.md) | Documentaries, recaps, action/beat pacing, revisions and manual-edit preservation |
 | Edit: B-roll | [davinci-broll](skills/davinci-broll/SKILL.md) | Relevant coverage, continuity, variety and footage requests |
 | Titles | [davinci-titles](skills/davinci-titles/SKILL.md) | Reference-led typography, name cards, style adaptation and glyph repair |
 | Fusion | [davinci-fusion](skills/davinci-fusion/SKILL.md) | Editable node graphs, animation, alpha and verified composites |
@@ -25,6 +25,8 @@ Read the [human review guide](docs/human-review-workflow.md) for what to supply,
 | Fairlight | [davinci-fairlight](skills/davinci-fairlight/SKILL.md) | External-audio sync, dialogue, music and peak checks |
 | Export / Deliver | [davinci-export](skills/davinci-export/SKILL.md) | Smaller individual clips or verified final-film delivery |
 | Dropbox | [dropbox-media-management](skills/dropbox-media-management/SKILL.md) | Bounded downloads, local proxies and online-only management |
+
+Support dialogue-led documentaries, music-led recaps/promos, and mixed videos. Choose pacing, captions and review artifacts from the brief; interview structure is not required for a montage. See [recap and montage guidance](skills/davinci-edit/references/recap-and-montage.md).
 
 Use a step directly or follow the [workflow contract](docs/workflow-contract.md). Skills include essential safeguards and work individually.
 
@@ -43,7 +45,7 @@ Use a step directly or follow the [workflow contract](docs/workflow-contract.md)
 With a current Codex CLI:
 
 ~~~sh
-codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.2.1
+codex plugin marketplace add amartinez1558/davinci-workflow-skills --ref v0.3.0
 codex plugin add davinci-workflow@davinci-workflow-skills
 ~~~
 
@@ -61,7 +63,7 @@ Start a new session. For an exact version, clone the tag below, then use /plugin
 ### Clone or install individual skills
 
 ~~~sh
-git clone --branch v0.2.1 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
+git clone --branch v0.3.0 --depth 1 https://github.com/amartinez1558/davinci-workflow-skills.git
 ~~~
 
 Copy desired skill folders into your client's skill directory: current Codex uses ~/.agents/skills/ and Claude Code uses ~/.claude/skills/. Review before overwriting existing same-name skills. Keep the clone for prompts and templates. No install script changes your assistant settings.
@@ -72,6 +74,7 @@ Invoke in Codex with $davinci-broll. In Claude Code, use /davinci-broll for an i
 
 - **Start here: [Beginner video prompt](prompts/beginner-intake.md)** — guided skills/Resolve setup, everyday questions and sensible defaults; no technical knowledge needed
 - [Original clip-sharing request, organized](prompts/clip-sharing-example.md)
+- [Event recap example](prompts/recap-example.md), with action selection, music and a spoken ending
 - [Documentary-edit example](prompts/documentary-example.md), using Jane Doe and John Doe
 - [Advanced intake prompt](prompts/project-intake-template.md), for detailed project control
 - [Script CSV](templates/video-script.csv) and [remaining-footage CSV](templates/remaining-footage.csv) for Google Sheets

@@ -2,7 +2,7 @@
 name: davinci-color
 description: Use when diagnosing exposure or color mismatches, comparing originals and proxies, applying input transforms, or matching and validating grades in DaVinci Resolve.
 metadata:
-  version: '0.1.2'
+  version: '0.1.3'
 ---
 
 # Color diagnosis and finishing
@@ -15,9 +15,10 @@ For project-wide practices, consult [workflow contract](../../docs/workflow-cont
 
 - Inspect actual camera/profile metadata, codec, bit depth, gamut, gamma, Full/Video range, current input interpretation, project/timeline/output management, node stacks, LUTs, and baked grades. Gamma tags alone do not establish the recording gamut. Record uncertainty instead of guessing from a camera brand or filename.
 - After manual insertions, audit the newly used clips and their timeline instances for missing transforms. Grade only the ungraded log material through the verified project color path, then balance each new shot against its neighbors; preserve already approved grades and display-referred media.
+- Check whether color settings are inherited from the project or overridden by the timeline. Scope a revision to its intended version; a project-wide change can alter archived timelines. Preserve per-instance grades when changing the technical path.
 - Verify the installed LUT and its own capture guidance when a specific transform is requested. Do not substitute exposure conventions from a different LUT generation.
 - Use one verified input transform: a managed input assignment, appropriate CST, or technical LUT. Account for automatic color management and project/group/timeline transforms before adding a clip transform.
-- A display-referred sharing copy with a baked grade must not receive another log input LUT. A phone clip tagged BT.2020 HLG with Dolby Vision metadata is HDR material, not Sony S-Log3. Use an appropriate verified HDR-to-output conversion or managed path; changing tags alone does not convert its image.
+- A display-referred sharing copy with a baked grade must not receive another log input LUT. A phone clip tagged BT.2020 HLG with Dolby Vision metadata is HDR material, not Sony S-Log3. Use an appropriate verified HDR-to-output conversion or managed path; changing tags alone does not convert its image. Before applying that path in bulk, test representative faces and bright surfaces in Resolve, including tone mapping and highlight handling; check a delivery sample when rendering is authorized or a matching render already exists. An accepted automatic SDR preset or correct settings readback does not prove a correct picture; balance exposure per shot rather than copying one CDL across the batch.
 
 ## Diagnose exposure and proxy problems
 

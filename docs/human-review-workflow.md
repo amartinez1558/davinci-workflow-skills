@@ -20,6 +20,8 @@ Review checkpoints are editorial decisions, not a reason to repeatedly ask permi
 
 ## 3. Mark trims in a simple table
 
+Choose the review artifact for the video. For a recap or montage, use `version | elapsed time | shot/action | change | status`, for example “Revision B | 00:18–00:22 | ball throw | hold through landing and reaction | pending.” Review visual grouping, complete actions, rhythm against the supplied music and the ending. A dialogue script or caption track is not needed to review these shots. The dialogue table below applies to spoken sections.
+
 Ask for a paste-ready trim table tied to the exact version you watched. A compact option is:
 
 | timestamp | subtitle | Remove |
